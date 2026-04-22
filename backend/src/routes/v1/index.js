@@ -1,0 +1,42 @@
+const { Router } = require("express");
+const healthRoutes = require("./health.routes");
+const authRoutes = require("./auth.routes");
+const usersRoutes = require("./users.routes");
+const petsRoutes = require("./pets.routes");
+const adminPetsRoutes = require("./admin/pets.routes");
+const adminStatsRoutes = require("./admin/stats.routes");
+const applicationsRoutes = require("./applications.routes");
+const notificationsRoutes = require("./notifications.routes");
+const careGuideRoutes = require("./care-guide.routes");
+const healthEventsRoutes = require("./health-events.routes");
+const qrRoutes = require("./qr.routes");
+const communityRoutes = require("./community.routes");
+const chatRoutes = require("./chat.routes");
+const mediaRoutes = require("./media.routes");
+const docsRoutes = require("./docs.routes");
+const shopRoutes = require("./shop.routes");
+const eventsRoutes = require("./events.routes");
+const volunteerRoutes = require("./volunteer.routes");
+
+const router = Router();
+
+router.use(healthRoutes);
+router.use("/auth", authRoutes);
+router.use("/users", usersRoutes);
+router.use("/pets", petsRoutes);
+router.use("/admin/pets", adminPetsRoutes);
+router.use("/admin", adminStatsRoutes);
+router.use("/applications", applicationsRoutes);
+router.use("/notifications", notificationsRoutes);
+router.use("/care-guide", careGuideRoutes);
+router.use("/health-events", healthEventsRoutes);
+router.use("/qr", qrRoutes);
+router.use("/community", communityRoutes);
+router.use("/chat", chatRoutes);
+router.use("/media", mediaRoutes);
+router.use("/docs", docsRoutes);
+router.use("/shop", shopRoutes);
+router.use("/events", eventsRoutes);
+router.use("/volunteer", volunteerRoutes);
+
+module.exports = router;
